@@ -13,37 +13,257 @@ html {
   display: flex;
 }
 
-header {
-  position: static;
-  margin: 1rem auto;
-  background-color: cadetblue;
-  height: 3rem;
-  width: 960px;
-  z-index: 1;
+.mobile {
+  display: none;
 }
 
-#main {
+#header {
+  width: 960px;
+  height: 3rem;
+  margin: 1rem auto 0 auto;
+  background-color: cadetblue;
+  z-index: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#left_head {
+  height: 100%;
+  width: 50%;
+  margin-left: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+#right_head {
+  height: 100%;
+  width: 50%;
+  margin-right: 2rem;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#head_logo img {
+  height: 1.5rem;
+  width: auto;
+}
+
+#name h2 {
+  color: white;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 1rem;
+}
+
+nav {
+  flex-direction: row;
+}
+
+nav h2 {
+  color: white;
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#bg1 {
+  width: 100%;
+  height: 30rem;
   background-image: url(../images/glasses-bg.png);
   background-size: cover;
   background-position: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   position: absolute;
   top: 0;
-  justify-content: center;
-  width: 100%;
-  height: 30rem;
   z-index: 10;
 }
 
-#motto {
-
+#main1 {
+  width: 960px;
+  height: 30rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#main_2 {
-  width: 100%;
-  min-height: 50rem;
+#motto {
+  position: flex;
+  align-self: flex-end;
+  margin: 10rem -2rem;
+  height: 5rem;
+  width: auto;
   background-color: white;
 }
 
-footer {
+#motto h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: auto;
+  padding: 0 5rem;
+}
 
+#bg2 {
+  position: absolute;
+  top: 30rem;
+  width: 100%;
+  min-height: auto;
+  background-color: white;
+}
+
+#main2 {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+
+#products {
+  width: auto;
+  height: 8rem;
+  flex-direction: row;
+  align-items: center;
+  margin: 3rem;
+}
+
+#products div {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 5rem;
+  height: 8rem;
+  margin: 3rem;
+}
+
+#products div p {
+  text-align: center;
+}
+
+#Exams img {
+  width: 3.5rem;
+  height: auto;
+}
+
+#Fittings img, #Delivery img {
+  width: 5rem;
+  height: auto;
+}
+
+#Content {
+  width: auto;
+  height: auto;
+  justify-content: center;
+}
+
+#Philosophy, #Appointments {
+  width: 35%;
+  height: auto;
+  flex-direction: column;
+  margin: 0 2.5% 0 2.5%;
+}
+
+#Phil_title, #Appt_title {
+  height: 2rem;
+  width: 10rem;
+  background-color: cadetblue;
+  margin-bottom: 1rem;
+}
+
+#Phil_title h2, #Appt_title h2 {
+  font-size: 1rem;
+  margin: auto auto auto 1.5rem;
+  color: white;
+}
+
+#Phil_text, #Appt_text {
+  margin-bottom: 14rem;
+}
+
+#Phil_text p, #Appt_text p {
+  font-size: 1rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  height: 9rem;
+  width: 960px;
+  background-color: azure;
+}
+
+#foot_logo {
+  align-items: center;
+  margin: auto 4rem;
+}
+
+#foot_logo img {
+  height: 1.5rem;
+  width: auto;
+}
+
+#foot_logo p {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  #header {
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  #bg1 {
+    height: 22rem;
+  }
+
+  #main1 {
+    width: 100%;
+  }
+
+  #motto {
+    height: 2.33rem;
+    margin: 8rem 2rem 0 0;
+  }
+
+  #motto h1 {
+    font-size: 1.33rem;
+    padding: 0 4rem;
+  }
+
+  #bg2 {
+    top: 22rem;
+  }
+
+  #main2 {
+    width: 100%;
+
+  }
+
+  #Phil_text, #Appt_text {
+    margin-bottom: 17rem;
+  }
+
+  #footer {
+    width: 100%;
+    bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .mobile {
+    display: flex;
+  }
+
+  .tab_desk {
+    display: none;
+  }
 }
