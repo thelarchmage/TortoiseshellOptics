@@ -17,6 +17,15 @@ html {
   display: none;
 }
 
+#main1 {
+  width: 960px;
+  height: 30rem;
+  margin: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 #header {
   width: 960px;
   height: 3rem;
@@ -30,17 +39,16 @@ html {
 
 #left_head {
   height: 100%;
-  width: 50%;
-  margin-left: 2rem;
-  flex-direction: row;
+  width: 15rem;
+  padding-left: 2rem;
   align-items: center;
 }
 
 #right_head {
   height: 100%;
-  width: 50%;
-  margin-right: 2rem;
-  flex-direction: row;
+  min-width: 50%;
+  max-width: 100%;
+  padding-right: 2rem;
   justify-content: flex-end;
   align-items: center;
 }
@@ -56,17 +64,21 @@ html {
   font-size: 1rem;
   font-weight: normal;
   margin-left: 1rem;
+  white-space: nowrap;
 }
 
 nav {
   flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 nav h2 {
   color: white;
-  margin-left: 2rem;
   font-size: 1rem;
+  padding-left: 2rem;
   font-weight: normal;
+  text-align: right;
 }
 
 #bg1 {
@@ -81,14 +93,7 @@ nav h2 {
   position: absolute;
   top: 0;
   z-index: 10;
-}
-
-#main1 {
-  width: 960px;
-  height: 30rem;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  overflow: hidden;
 }
 
 #motto {
@@ -217,12 +222,13 @@ nav h2 {
 @media only screen and (max-width: 1080px) {
   #header {
     position: fixed;
-    margin-top: 0;
+    margin: 0 auto;
     width: 100%;
   }
 
   #bg1 {
     height: 22rem;
+    background-position: center left 20%;
   }
 
   #main1 {
@@ -258,12 +264,93 @@ nav h2 {
   }
 }
 
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 600px) {
   .mobile {
     display: flex;
   }
 
   .tab_desk {
     display: none;
+  }
+
+  #right_head {
+    min-width: 10%;
+  }
+
+  #bg1 {
+    height: 17rem;
+    width: 100%;
+    background-position: left;
+  }
+
+  #bg2 {
+    top: 17rem;
+    height: auto;
+  }
+
+  #main2 {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #motto {
+    width: 100%;
+    height: 3rem;
+    margin: 12rem auto 0 auto;
+  }
+
+  #motto h1 {
+    font-size: 1rem;
+  }
+
+  #products {
+    flex-direction: column;
+    margin: 3.77rem auto;
+    height: auto;
+  }
+
+  #products div {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #products div p {
+    font-size: 0.77rem;
+    width: 5rem;
+    padding: 1.54rem;
+  }
+
+  #Content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #Philosophy, #Appointments {
+    width: 100%;
+    margin: auto;
+  }
+
+  #Phil_title, #Appt_title {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  #Phil_title h2, #Appt_title h2 {
+    margin: auto;
+  }
+
+  #Phil_text, #Appt_text {
+    width: 95%;
+    margin: 1rem auto 4rem;
+  }
+
+  #Appt_text{
+    margin-bottom: 13rem;
+  }
+
+  #footer {
+    bottom: 0;
+    justify-content: center;
   }
 }
