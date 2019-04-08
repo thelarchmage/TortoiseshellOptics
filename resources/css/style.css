@@ -320,6 +320,10 @@ nav h2 {
     padding: 1.54rem;
   }
 
+  #Delivery p {
+    width: 3rem !important;
+  }
+
   #Content {
     flex-direction: column;
     height: auto;
